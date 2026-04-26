@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الخبر</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        body { font-family: 'Rubik', sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: #02438d !important; } /* لون الناف بار الثابت */
+        .news-header-img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        .content-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: -100px; /* حركة تداخل مع الصورة */
+            position: relative;
+            z-index: 2;
+        }
+        .meta-info { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
+        .back-btn { color: #02438d; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark shadow-sm mb-5">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Delta Memory</a>
+            <a href="index.html" class="btn btn-outline-light btn-sm">العودة للرئيسية</a>
+        </div>
+    </nav>
+
+    <div class="container mb-5">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/18142635906778980058_0" class="news-header-img shadow" alt="تفاصيل الخبر">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card">
+                    <div class="meta-info">
+                        <span><i class="bi bi-calendar3 me-1"></i> 8 فبراير 2026</span>
+                        <span class="ms-3"><i class="bi bi-person me-1"></i> بواسطة: إدارة المركز الإعلامي</span>
+                    </div>
+
+                    <h1 class="fw-bold mb-4" style="color: #02438d;">تفاصيل الحدث والفعاليات الأكاديمية</h1>
+                    
+                    <div class="news-text" style="line-height: 2; color: #444;">
+                        <p>تستمر جامعاتنا في تقديم أفضل المعايير الأكاديمية لطلابها، حيث شهدت الفترة الأخيرة سلسلة من الإنجازات والفعاليات التي تعكس رؤية المؤسسة في تطوير التعليم التكنولوجي في مصر.</p>
+                        
+                        <h4 class="fw-bold mt-4 mb-3">أبرز النقاط:</h4>
+                        <ul>
+                            <li>تحديث المعامل البحثية بأحدث الأجهزة العالمية.</li>
+                            <li>توقيع اتفاقيات تبادل طلابي مع جامعات أوروبية.</li>
+                            <li>إطلاق منصة التعليم الذكي الجديدة لتسهيل التواصل بين الطالب والأستاذ.</li>
+                        </ul>
+
+                        <p class="mt-4">نحن نؤمن بأن الطالب هو محور العملية التعليمية، ولذلك نسعى دائماً لتوفير بيئة تحفز على الإبداع والابتكار، مع التركيز على المهارات العملية التي يتطلبها سوق العمل المعاصر.</p>
+                    </div>
+
+                    <hr class="my-4">
+                    <a href="index.html" class="back-btn"><i class="bi bi-arrow-right"></i> العودة للأخبار الأخرى</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center text-muted border-top bg-white">
+        <small>&copy; 2026by team 12 جميع الحقوق  محفوظة </small>
+    </footer>
+
+</body>
+</html>

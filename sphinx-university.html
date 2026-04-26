@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Memory - جامعة سفنكس</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    
+    <style>
+        :root { 
+            --main-blue: #02438d; 
+            --main-gold: #e2e1da; 
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #mainNav {
+            background-color: transparent !important;
+            transition: all 0.4s ease-in-out;
+            padding: 15px 0;
+        }
+
+     
+        #mainNav.navbar-scrolled {
+            background-color: var(--main-blue) !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 8px 0;
+        }
+
+        /* --- سكشن الهيرو --- */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imgs/imgs/bg.jpg');
+            background-size: cover; 
+            background-position: center;
+            height: 100vh; /* واخد الشاشة كلها */
+            display: flex; 
+            align-items: center; 
+            color: white;
+        }
+
+        /* --- العناوين --- */
+        .section-title { 
+            color: var(--main-blue); 
+            border-bottom: 3px solid var(--main-gold); 
+            display: inline-block; 
+            margin-bottom: 30px; 
+            font-weight: bold;
+        }
+
+        /* --- الجاليري --- */
+        .gallery-img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-img:hover { 
+            transform: translateY(-10px); 
+        }
+
+        /* --- الخريطة --- */
+        .map-wrapper {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+        /* تنسيق سكشن الرؤية والرسالة */
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border-top: 5px solid #02438d; 
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #eef3f9;
+    color: #02438d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+}
+
+.ue-blob-title {
+    color: #02438d; 
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#VisionMission p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+
+
+
+
+/*  */
+
+
+h1{
+margin:40px;
+}
+
+.containers{
+
+display:grid;
+grid-template-columns:repeat(auto-fit , minmax(200px , 1fr));
+gap:30px;
+width:80%;
+margin:auto;
+
+}
+
+.cards{
+
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+
+}
+
+.cards:hover{
+
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+.cards img{
+
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #3498db;
+transition:0.4s;
+
+}
+
+.cards:hover img{
+
+transform:scale(1.1);
+border-color:#e74c3c;
+
+}
+
+.cards h2{
+
+margin:15px 0 5px;
+
+}
+
+.cards p{
+
+color:gray;
+
+}
+
+
+
+
+/*  */
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold fs-3" href="index.html">Delta Memory</a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#About">النشأة</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#admin">الهيكل الادارى</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#Archive">الأرشيف</a></li>
+                    <li class="nav-item"><a class="nav-link text-white px-3" href="#Map">الموقع</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.703)), url('imgs/imgs/sfnks.jpeg');">
+        <div class="container">
+            <h1 class="display-2 fw-bold mb-3">جامعة سفنكس بأسيوط الجديدة </h1>
+            <p class="fs-4 mb-5">منارة تعليمية في قلب الصعيد </p>
+            <a href="https://sphinx.edu.eg" target="_blank" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                زيارة الموقع الرسمي للجامعة <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+        <section id="About" class="mb-5 py-4">
+            <h2 class="section-title">النشأة والتطور</h2>
+            <div class="card border-0 shadow-sm p-4 bg-white border-start border-4 border-primary">
+                <p class="fs-5 mb-0">
+جامعة سفنكس هي مؤسسة حديثة تأسست بموجب القرار الجمهوري المصري رقم 36 لسنة 2019. وهي أول جامعة ممولة من القطاع الخاص في المنطقة ومصممة لتناسب مختلف المستويات الاجتماعية.
+تضم الجامعة كليات الطب وكليات العلوم والتكنولوجيا والهندسة والرياضيات (STEM) المجهزة بأحدث تقنيات التدريس والبحث وطرق التدريس العالمية.                </p>
+            </div>
+        </section>
+        <section id="VisionMission" class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="info-card h-100 shadow-sm">
+                    <div class="icon-box"><i class="bi bi-eye"></i></div>
+                    <h3 class="ue-blob-title">الرؤية</h3>
+                    <p>أن نكون مؤسسة تعليمية رائدة عالمياً في تقديم تعليم تكنولوجي مبتكر يساهم في بناء مجتمع المعرفة.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="info-card h-100 shadow-sm">
+                    <div class="icon-box"><i class="bi bi-bullseye"></i></div>
+                    <h3 class="ue-blob-title">الرسالة</h3>
+                    <p>إعداد خريجين متميزين قادرين على المنافسة في سوق العمل من خلال بيئة تعليمية محفزة للبحث والابتكار.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="info-card h-100 shadow-sm">
+                    <div class="icon-box"><i class="bi bi-award"></i></div>
+                    <h3 class="ue-blob-title">الأهداف</h3>
+                    <p>تطوير البرامج الأكاديمية، تعزيز الشراكات الدولية، وخدمة المجتمع من خلال حلول تقنية مستدامة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- الهيكل الادارى -->
+
+
+<section id="admin">
+<h1>الهيكل الإداري للجامعة</h1>
+
+<div class="containers">
+
+<div class="cards">
+<img src="imgs/imgs/mansour.jpg">
+<h2>  رئيس الجامعه</h2>
+<p>د / منصور كباش </p>
+</div>
+
+<div class="cards">
+<img src="imgs/imgs/osamaa.jpg">
+<h2>  رئيس مجلس الامناء</h2>
+<p>د / اسامه محمد ربيع    </p>
+</div>
+
+<div class="cards">
+<img src="imgs/imgs/mahmoud.jpg">
+<h2>    نائب رئيس جامعة سفنكس </h2>
+<p>د /  محمود شيحه </p>
+</div>
+
+<div class="cards">
+<img src="imgs/imgs/rabab.jpg">
+<h2> عميد كلية طب الفم والاسنان</h2>
+<p>د / رباب  مبارك</p>
+</div>
+
+<div class="cards">
+<img src="imgs/imgs/sahar.jpg">
+<h2>وكيل كليه الطب للاسنان</h2>
+<p>د /   سحر غراب </p>
+</div>
+
+
+<div class="cards">
+<img src="imgs/imgs/entsar.jpg">
+<h2>عميد كليه التمريض</h2>
+<p>د / انتصار محمد يونس   </p>
+</div>
+</div>
+
+</section>
+<!--  -->
+
+
+
+
+
+
+</section>
+        <section id="Archive" class="mb-5 py-4">
+            <h2 class="section-title"> الأرشيف التاريخي </h2>
+            <div class="row g-4">
+                <div class="col-md-4"><img src="imgs/imgs/sphinx 1.jpeg" class="gallery-img" alt="مرحلة التأسيس"></div>
+                <div class="col-md-4"><img src="imgs/imgs/sphinx 2.jpeg" class="gallery-img" alt="أول دفعة"></div>
+                <div class="col-md-4"><img src="imgs/imgs/sphnix 3.jpeg" class="gallery-img" alt="زيارة تاريخية"></div>
+             <div class="col-md-4"><img src="imgs/imgs/sphinx4.jpeg" class="gallery-img" alt="زيارة تاريخية"></div>
+             <div class="col-md-4"><img src="imgs/imgs/sphinx 5.jpeg" class="gallery-img" alt="زيارة تاريخية"></div>
+             <div class="col-md-4"><img src="imgs/imgs/sphinx6.jpeg" class="gallery-img" alt="زيارة تاريخية"></div>
+            </div>
+            </div>
+            <div class="mt-4 text-center">
+                                    <a href="files/history-Sphinx .pdf" class="btn btn-outline-danger" download>
+                    <i class="bi bi-file-earmark-pdf"></i> تحميل السجل التاريخي (PDF)
+                </a>
+            </div>
+        </section>
+
+        <section id="Map" class="mb-5 py-4">
+            <h2 class="section-title">موقع الجامعة الجغرافي</h2>
+            <div class="map-wrapper shadow">
+                <div class="ratio ratio-21x9">
+              <div class="ratio ratio-21x9 shadow-sm border rounded overflow-hidden">
+<iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.04603681403!2d31.266196475253896!3d27.2694369764375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14496dd17435a691%3A0x50e4704a237ceb2a!2z2KzYp9mF2LnYqSDRgdmB2YbZg9iz!5e0!3m2!1sar!2seg!4v1700000000000!5m2!1sar!2seg" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+  <footer class="py-4 border-top bg-white">
+        <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <p class="mb-0 text-muted small">&copy; 2026 Delta Memory team 12 -  جميع الحقوق محفوظة لجامعة سفنكس </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                nav.classList.add('navbar-scrolled');
+            } else {
+                nav.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

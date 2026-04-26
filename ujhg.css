@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  font-family: Cairo, Arial, sans-serif;
+}
+
+body {
+background: #020024;
+background: radial-gradient(circle, rgba(2, 0, 36, 1) 45%, rgba(9, 9, 121, 1) 70%, rgba(0, 212, 255, 1) 100%);
+
+
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a237e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+/* انيميشن */
+.loader {
+  max-width: fit-content;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  font-family: Mine;
+  position: relative;
+  font-style: italic;
+  font-weight: 600;
+}
+.loader span {
+  animation: cut 2s infinite;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.loader:hover {
+  color: #dfffe9;
+}
+.loader::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #ff828291;
+  top: 0px;
+  filter: blur(10px);
+  animation: scan 2s infinite;
+  left: 0;
+  z-index: 0;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.loader::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: #ff8282;
+  top: 0px;
+  animation: scan 2s infinite;
+  left: 0;
+  z-index: 1;
+  filter: opacity(0.9);
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes scan {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 54px;
+  }
+  50% {
+    top: 0px;
+  }
+  75% {
+    top: 54px;
+  }
+}
+@keyframes cut {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  25% {
+    clip-path: inset(100% 0 0 0);
+  }
+  50% {
+    clip-path: inset(0 0 100% 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+
+
+
+/* robot */
+.robot1{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+
+
+
+/* الكارد */
+.card {
+  width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden; /* 🔥 يمنع أي خروج */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* حاوية الصورة */
+.img-box {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto 10px;
+  border-radius: 50%;
+  overflow: hidden; /* 🔥 */
+  border: 4px solid #1a237e;
+}
+
+/* الصورة */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 */
+}
+
+/* النص */
+.card h3 {
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.card p {
+  margin: 0;
+  color: #555;
+}
